@@ -1,12 +1,21 @@
-import GlobalStyle from "./styles/GlobalStyle"
-import Navbar from "./components/Navbar/Navbar"
+import GlobalStyle from "./styles/GlobalStyle";
+import Navbar from "./components/Navbar/Navbar";
+import Socials from "./components/Socials";
+
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Posts from "./pages/Posts";
 
 function App() {
   return (
     <>
       <GlobalStyle />
       <Navbar />
-      <h1>A</h1>
+      <Home/>
+      <Projects/>
+      <Posts/>
+      <Socials/>
+      <span>made with 🌻 ☕ 🎧 💖 by myself ©{new Date().getFullYear()}</span>
     </>
   )
 }

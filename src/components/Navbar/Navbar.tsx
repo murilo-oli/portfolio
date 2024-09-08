@@ -2,24 +2,28 @@ import styled from 'styled-components';
 import colors from '../../styles/colors'
 import { Item, LogoItem } from "./NavItem";
 
-export default function Navbar(){
+export default function Navbar() {
     return (
         <NavContainer>
             <LogoItem color={colors.home}>oli</LogoItem>
-            <section>
+            <MenuContainer>
                 <Item color={colors.proj}>projects</Item>
                 <Item color={colors.blog}>posts</Item>
                 {/* <Item color={colors.about}>about</Item> */}
-                <Item color={colors.cv}>CV</Item>
-            </section>
+                <Item color={colors.cv}>cv</Item>
+            </MenuContainer>
         </NavContainer>
     );
 }
 
-const NavContainer = styled.nav`
+const NavContainer = styled.header`
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+`;
 
-    & section{
-        display: flex;
-    }
+const MenuContainer = styled.nav`
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
 `;

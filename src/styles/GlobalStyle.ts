@@ -13,10 +13,12 @@ body {
     max-width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+
+    padding: 2rem 8rem;
 }
 
 body {
-    background-color: ${colors.bgDark};
+    background: ${colors.bgDark};
     color: ${colors.fgDark};
 
     font-family: 'Lexend';
