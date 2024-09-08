@@ -5,7 +5,7 @@ import { Item, LogoItem } from "./NavItem";
 export default function Navbar() {
     return (
         <NavContainer>
-            <LogoItem color={colors.home}>oli</LogoItem>
+            <LogoItem color={colors.home}>oli.dev</LogoItem>
             <MenuContainer>
                 <Item color={colors.proj}>projects</Item>
                 <Item color={colors.blog}>posts</Item>

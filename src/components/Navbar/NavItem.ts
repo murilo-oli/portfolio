@@ -55,6 +55,22 @@ export const Item = styled.a`
 export const LogoItem = styled.a`
     width: min-content;
     height: min-content;
+    font-weight: 500;
+    color: ${colors.bgDark};
+    padding: 0.1rem 0.5rem;
+    position: relative;
+
+    &::before{
+        content: "";
+        background-color: ${colors.home};
+        transform: skewX(-20deg);
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+    }
 `;
 
 
