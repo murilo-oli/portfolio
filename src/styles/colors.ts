@@ -1,5 +1,5 @@
 export default {
-    bgDark: "#000000",
+    bgDark: "#030303",
     fgDark: "#ffffff",
     home: "#ffbe0b",
     about: "#9b5de5",

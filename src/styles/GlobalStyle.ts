@@ -6,15 +6,15 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    outline: 0;
 }
 
 html,
 body {
     max-width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
 
-    padding: 2rem 8rem;
+    padding: 2rem 7rem;
 }
 
 body {
