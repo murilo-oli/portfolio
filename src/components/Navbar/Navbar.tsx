@@ -10,7 +10,7 @@ export default function Navbar() {
                 <Item color={colors.proj}>projects</Item>
                 <Item color={colors.about}>about</Item>
                 <Item color={colors.blog}>posts</Item>
-                <Item color={colors.cv}>cv</Item>
+                <Item color={colors.contact}>contact</Item>
             </MenuContainer>
         </NavContainer>
     );

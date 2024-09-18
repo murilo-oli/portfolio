@@ -22,13 +22,12 @@ export default function Home() {
 const HomeContainer = styled.main`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 70vh;
 
     column-gap: 2rem;
 
     align-items: center;
 
-    padding: 3rem 0 6rem 0;
+    padding-bottom: 6rem;
 `;
 
 const TextContent = styled.section`

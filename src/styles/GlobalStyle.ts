@@ -24,6 +24,12 @@ body {
     font-family: 'Lexend';
 }
 
+#root{
+    display: grid;
+    grid-template-rows: 4rem 75vh repeat(3, 1fr);
+    row-gap: 2.5rem;
+}
+
 span {
     font-size: 0.9rem;
 }

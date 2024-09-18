@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import colors from '../styles/colors';
 
-import {TbBrandMedium, TbBrandLinkedin, TbAt} from 'react-icons/tb'
+import {TbBrandMedium, TbBrandLinkedin, TbAt, TbFileText} from 'react-icons/tb'
 import {LiaGithub} from 'react-icons/lia'
 import {PiDevToLogo} from 'react-icons/pi'
 
@@ -13,6 +13,7 @@ export default function Socials(){
             <SocialIconLink href="https://medium.com/@akadot_" target='_blank' title='general articles'><TbBrandMedium size='2rem'/></SocialIconLink>
             <SocialIconLink href="https://www.linkedin.com/in/murilo-o/" target='_blank' title='professional me'><TbBrandLinkedin size='2rem'/></SocialIconLink>
             <SocialIconLink href="mailto:muriloholiveira@hotmail.com" title='mail me'><TbAt size='2rem'/></SocialIconLink>
+            <SocialIconLink href="#" title='download resume'><TbFileText size='2rem'/></SocialIconLink>
         </SocialContainer>
     );
 }
@@ -49,6 +50,6 @@ const SocialIconLink = styled.a`
     }
 
     &[href*="mailto"]:hover{
-        color: ${colors.cv};
+        color: ${colors.contact};
     }
 `;
