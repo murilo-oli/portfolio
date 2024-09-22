@@ -16,7 +16,6 @@ function Model() {
                 const model = gltf.scene;
                 model.scale.set(0.08, 0.08, 0.085); // Ajuste a escala do modelo
                 model.rotation.y = - Math.PI / 10;
-                console.log(gltf.animations)
                 scene.add(model);
                 mixerRef.current = new THREE.AnimationMixer(model);
                 mixerRef.current.clipAction(gltf.animations[0]).play();
@@ -36,7 +35,7 @@ function Model() {
         };
     }, [scene, loader]);
 
-    useFrame((state, delta) => {
+    useFrame((_state, delta) => {
         // Atualiza o mixer em cada quadro
         if (mixerRef.current) {
             mixerRef.current.update(delta);
