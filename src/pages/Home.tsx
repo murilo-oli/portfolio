@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import Socials from "../components/Socials";
+import Model3D from "../components/3D/Model3D";
+import { Suspense } from "react";
 
 export default function Home() {
     return (
@@ -13,7 +15,9 @@ export default function Home() {
                 <Socials />
             </TextContent>
             <ImageContent>
-                <section></section>
+                <Suspense fallback={<span>Loading...</span>}>
+                    <Model3D />
+                </Suspense>
             </ImageContent>
         </HomeContainer>
     );
@@ -23,16 +27,17 @@ const HomeContainer = styled.main`
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    column-gap: 2rem;
+    /* column-gap: 2rem; */
 
-    align-items: center;
+    align-items: flex-start;
 
-    padding-bottom: 6rem;
+    /* padding-bottom: 6rem; */
 `;
 
 const TextContent = styled.section`
     /* line-height: 1.7; */
     padding-right: 10rem;
+    padding-top: 2rem;
 
     & p{
         padding: 1rem 0;
@@ -56,13 +61,10 @@ const TextContent = styled.section`
 `;
 
 const ImageContent = styled.section`
-    height: 90%;
-    justify-self: flex-end;
-
-    & section{
-        height: 100%;
-        width: 25rem;
-        border-radius: 2rem;
-        background-color: #1F44D9;
-    }
+  height: 100%;  // Alterar a altura para 100% da viewport
+  width: 100%;    // Garantir que o canvas ocupe a largura total
+  justify-self: center;  // Centralizar o canvas
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

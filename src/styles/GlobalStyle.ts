@@ -27,7 +27,7 @@ body {
 #root{
     display: grid;
     grid-template-rows: 4rem 75vh repeat(3, 1fr);
-    row-gap: 2.5rem;
+    row-gap: 2rem;
 }
 
 span {
