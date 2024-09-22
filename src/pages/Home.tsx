@@ -5,7 +5,7 @@ import { Suspense } from "react";
 
 export default function Home() {
     return (
-        <HomeContainer>
+        <HomeContainer id="home">
             <TextContent>
                 <p>Hi, I&apos;m <strong>Murilo Oliveira</strong>,</p>
                 <h1>A PROFESSIONAL PROBLEM SOLVER</h1>
