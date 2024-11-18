@@ -4,23 +4,35 @@ import { Suspense, useEffect, useMemo, useRef } from 'react';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import * as THREE from 'three';
 
-function Model() {
+interface ModelConfigs {
+    path: string,
+    position?: [number, number, number],
+    rotation?: [number, number, number],
+    scale?: [number, number, number],
+    hasLight: boolean
+}
+
+function Model({ path, position = [0, 0, 0], rotation = [0, 0, 0], scale = [1, 1, 1]}: ModelConfigs) {
     const { scene } = useThree();
     const loader = useMemo(() => new GLTFLoader(), []);
     const mixerRef = useRef<THREE.AnimationMixer | null>(null);
 
     useEffect(() => {
         loader.load(
-            '/model/scene.gltf',
+            path,
             function (gltf) {
                 const model = gltf.scene;
-                model.scale.set(0.08, 0.08, 0.085);
-                model.rotation.y = - Math.PI / 10;
-                scene.add(model);
+
+                model.position.set(...position);
+                model.rotation.set(...rotation);
+                model.scale.set(...scale);
+
                 mixerRef.current = new THREE.AnimationMixer(model);
                 if (gltf.animations.length > 0) {
                     mixerRef.current.clipAction(gltf.animations[0]).play();
                 }
+
+                scene.add(model);
             },
             function (xhr) {
                 console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
@@ -45,31 +57,35 @@ function Model() {
     return null;
 }
 
-export default function Model3D() {
+export default function Model3D(props: ModelConfigs) {
     return (
         <Canvas style={{ width: '100%', height: '100%' }}
             camera={{ position: [1.8, 0.8, 0], }}>
             <Suspense fallback={<span>Loading...</span>}>
-                <ambientLight/>
-                <pointLight
-                    color="#1F44D9"
-                    position={[0, 1, -1]}
-                    intensity={50}
-                    distance={5}
-                    decay={2}
-                />
-                <pointLight
-                    color="#450496"
-                    position={[-2, 1, 1]}
-                    intensity={50}
-                    distance={5}
-                    decay={2}
-                />
-                <Model />
-                <OrbitControls 
-                    minDistance={2} 
-                    maxDistance={3} 
-                    enableZoom={false} 
+                <ambientLight />
+                {props.hasLight &&
+                    <>
+                        <pointLight
+                            color="#1F44D9"
+                            position={[0, 1, -1]}
+                            intensity={50}
+                            distance={5}
+                            decay={2}
+                        />
+                        <pointLight
+                            color="#450496"
+                            position={[-2, 1, 1]}
+                            intensity={50}
+                            distance={5}
+                            decay={2}
+                        />
+                    </>
+                }
+                <Model {...props} />
+                <OrbitControls
+                    minDistance={2}
+                    maxDistance={3}
+                    enableZoom={false}
                     enableRotate={false} />
             </Suspense>
         </Canvas>

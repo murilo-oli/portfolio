@@ -10,13 +10,19 @@ export default function Home() {
                 <p>Hi, I&apos;m <strong>Murilo Oliveira</strong>,</p>
                 <h1>A PROFESSIONAL PROBLEM SOLVER</h1>
                 <p>Currently solving web problems with <span data-lang="dotnet">.NET</span>, <span data-lang="csharp">C#</span>, <span data-lang="js">Javascript</span>, <span data-lang="ts">Typescript</span>, <span data-lang="react">React</span>, and <span data-lang="vue">Vue.</span></p>
-                <p>Also creating and documenting my own problems learning something new.</p>
+                <p>Also interested in game dev, 3D modeling and printing, graffiti and writing.</p>
                 <p>See you.</p>
                 <Socials />
             </TextContent>
             <ImageContent>
                 <Suspense fallback={<span>Loading...</span>}>
-                    <Model3D />
+                    <Model3D 
+                        path="/model/main_model/scene.gltf"
+                        position={[0,0,0]}
+                        rotation={[0, -Math.PI / 10, 0]}
+                        scale={[0.08, 0.08, 0.085]}
+                        hasLight={true}
+                    />
                 </Suspense>
             </ImageContent>
         </HomeContainer>
