@@ -26,6 +26,7 @@ body {
 
 #root{
     display: grid;
+    /* grid-template-rows: 4rem repeat(4, 1fr); */
     grid-template-rows: 4rem 75vh repeat(3, 1fr);
     row-gap: 2rem;
 }

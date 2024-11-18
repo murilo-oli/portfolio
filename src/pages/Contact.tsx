@@ -10,6 +10,7 @@ export default function Contact(){
                         rotation={[0, 1.4, 0]}
                         scale={[0.023, 0.023, 0.023]}
                         hasLight={false}
+                        enableRotation={false}
                     />
                 </Suspense>
     );

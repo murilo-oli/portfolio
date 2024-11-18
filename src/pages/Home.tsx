@@ -18,10 +18,11 @@ export default function Home() {
                 <Suspense fallback={<span>Loading...</span>}>
                     <Model3D 
                         path="/model/main_model/scene.gltf"
-                        position={[0,0,0]}
+                        position={[0,0,-0.1]}
                         rotation={[0, -Math.PI / 10, 0]}
-                        scale={[0.08, 0.08, 0.085]}
+                        scale={[0.085, 0.085, 0.085]}
                         hasLight={true}
+                        enableRotation={true}
                     />
                 </Suspense>
             </ImageContent>
@@ -42,7 +43,7 @@ const HomeContainer = styled.main`
 
 const TextContent = styled.section`
     /* line-height: 1.7; */
-    padding-right: 10rem;
+    padding-right: 5rem;
     padding-top: 2rem;
 
     & p{

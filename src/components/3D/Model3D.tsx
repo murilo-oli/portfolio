@@ -9,7 +9,8 @@ interface ModelConfigs {
     position?: [number, number, number],
     rotation?: [number, number, number],
     scale?: [number, number, number],
-    hasLight: boolean
+    hasLight: boolean,
+    enableRotation: boolean
 }
 
 function Model({ path, position = [0, 0, 0], rotation = [0, 0, 0], scale = [1, 1, 1]}: ModelConfigs) {
@@ -22,7 +23,6 @@ function Model({ path, position = [0, 0, 0], rotation = [0, 0, 0], scale = [1, 1
             path,
             function (gltf) {
                 const model = gltf.scene;
-
                 model.position.set(...position);
                 model.rotation.set(...rotation);
                 model.scale.set(...scale);
@@ -30,6 +30,12 @@ function Model({ path, position = [0, 0, 0], rotation = [0, 0, 0], scale = [1, 1
                 mixerRef.current = new THREE.AnimationMixer(model);
                 if (gltf.animations.length > 0) {
                     mixerRef.current.clipAction(gltf.animations[0]).play();
+                }
+
+                const removableBg = model.getObjectByName("small-polka-dot-seamless-pattern-background-retro-vintage-vecto_119") as THREE.Object3D;
+ 
+                if(removableBg){
+                    removableBg.parent?.remove(removableBg)
                 }
 
                 scene.add(model);
@@ -86,7 +92,9 @@ export default function Model3D(props: ModelConfigs) {
                     minDistance={2}
                     maxDistance={3}
                     enableZoom={false}
-                    enableRotate={false} />
+                    enableRotate={props.enableRotation}
+                    maxPolarAngle={0}
+                    minPolarAngle={Math.PI *0.4} />
             </Suspense>
         </Canvas>
     );
