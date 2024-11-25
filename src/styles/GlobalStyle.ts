@@ -13,7 +13,7 @@ body {
     max-width: 100vw;
     height: 100vh;
 
-    padding: 4rem 12rem 0rem 12rem;
+    padding: 4rem 14rem 0rem 14rem;
 }
 
 body {
@@ -28,7 +28,7 @@ body {
     display: grid;
     grid-template-rows: 4rem 1fr;
     row-gap: 2rem;
-    align-items: center;
+    /* align-items: center; */
     height:100%;
 }
 

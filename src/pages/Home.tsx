@@ -23,7 +23,7 @@ export default function Home() {
                         scale={[0.085, 0.085, 0.085]}
                         hasLight={true}
                         enableRotation={true}
-                        enableZoom={true}
+                        enableZoom={false}
                     />
                 </Suspense>
             </ImageContent>
