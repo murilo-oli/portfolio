@@ -9,12 +9,11 @@ const GlobalStyle = createGlobalStyle`
     outline: 0;
 }
 
-html,
 body {
     max-width: 100vw;
     height: 100vh;
 
-    padding: 2rem 7rem;
+    padding: 4rem 12rem 0rem 12rem;
 }
 
 body {
@@ -22,13 +21,15 @@ body {
     color: ${colors.fgDark};
 
     font-family: 'Lexend';
-    overflow:hidden;
+    /* overflow:hidden; */
 }
 
 #root{
     display: grid;
-    grid-template-rows: 4rem 100%;
+    grid-template-rows: 4rem 1fr;
     row-gap: 2rem;
+    align-items: center;
+    height:100%;
 }
 
 span {

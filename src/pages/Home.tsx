@@ -8,7 +8,7 @@ export default function Home() {
         <HomeContainer id="home">
             <TextContent>
                 <p>Hi, I&apos;m <strong>Murilo Oliveira</strong>,</p>
-                <h1>A PROFESSIONAL PROBLEM SOLVER</h1>
+                <h1>A PROFESSIONAL PROBLEM SOLVER.</h1>
                 <p>Currently solving web problems with <span data-lang="dotnet">.NET</span>, <span data-lang="csharp">C#</span>, <span data-lang="js">Javascript</span>, <span data-lang="ts">Typescript</span>, <span data-lang="react">React</span>, and <span data-lang="vue">Vue.</span></p>
                 <p>Also interested in game dev, 3D modeling and printing, graffiti and writing.</p>
                 <p>See you.</p>
@@ -32,12 +32,14 @@ export default function Home() {
 }
 
 const HomeContainer = styled.main`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
+    height:100%;
+    display:flex;
+    align-items: center;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr; */
     /* column-gap: 2rem; */
 
-    align-items: center;
+    /* justify-content:center; */
 
     /* padding-bottom: 6rem; */
 `;
@@ -46,6 +48,8 @@ const TextContent = styled.section`
     /* line-height: 1.7; */
     padding-right: 5rem;
     padding-top: 2rem;
+    width:100%;
+    align-self:baseline;
 
     & p{
         padding: 1rem 0;
