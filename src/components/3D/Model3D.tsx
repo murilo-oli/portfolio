@@ -10,7 +10,8 @@ interface ModelConfigs {
     rotation?: [number, number, number],
     scale?: [number, number, number],
     hasLight: boolean,
-    enableRotation: boolean
+    enableRotation: boolean,
+    enableZoom: boolean
 }
 
 function Model({ path, position = [0, 0, 0], rotation = [0, 0, 0], scale = [1, 1, 1]}: ModelConfigs) {
@@ -91,7 +92,7 @@ export default function Model3D(props: ModelConfigs) {
                 <OrbitControls
                     minDistance={2}
                     maxDistance={3}
-                    enableZoom={false}
+                    enableZoom={props.enableZoom}
                     enableRotate={props.enableRotation}
                     maxPolarAngle={0}
                     minPolarAngle={Math.PI *0.4} />

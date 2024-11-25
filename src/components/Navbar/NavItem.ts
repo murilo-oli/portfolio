@@ -1,5 +1,6 @@
 import colors from "../../styles/colors";
 import styled, { keyframes } from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const hover_nav = keyframes`
     0% {width: 0;}
@@ -13,7 +14,7 @@ const hover_text = keyframes`
     100% {color: ${colors.bgDark};}
 `;
 
-export const Item = styled.a`
+export const Item = styled(NavLink)`
     position: relative;
     display: flex;
     cursor: pointer;
@@ -52,7 +53,7 @@ export const Item = styled.a`
 
 
 
-export const LogoItem = styled.a`
+export const LogoItem = styled(NavLink)`
     width: min-content;
     height: min-content;
     font-weight: 500;

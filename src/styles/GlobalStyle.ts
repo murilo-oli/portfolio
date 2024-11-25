@@ -22,12 +22,12 @@ body {
     color: ${colors.fgDark};
 
     font-family: 'Lexend';
+    overflow:hidden;
 }
 
 #root{
     display: grid;
-    /* grid-template-rows: 4rem repeat(4, 1fr); */
-    grid-template-rows: 4rem 75vh repeat(3, 1fr);
+    grid-template-rows: 4rem 100%;
     row-gap: 2rem;
 }
 

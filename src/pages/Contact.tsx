@@ -11,6 +11,7 @@ export default function Contact(){
                         scale={[0.023, 0.023, 0.023]}
                         hasLight={false}
                         enableRotation={false}
+                        enableZoom={false}
                     />
                 </Suspense>
     );

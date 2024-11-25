@@ -1,11 +1,12 @@
 import GlobalStyle from "./styles/GlobalStyle";
 import Navbar from "./components/Navbar/Navbar";
+import {Routes, Route} from 'react-router-dom'
 // import Socials from "./components/Socials";
 
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
-import Posts from "./pages/Posts";
 import About from "./pages/About";
+import Posts from "./pages/Posts";
 import Contact from "./pages/Contact";
 
 function App() {
@@ -13,13 +14,14 @@ function App() {
     <>
       <GlobalStyle />
       <Navbar />
-      <Home/>
-      <Projects/>
-      <About/>
-      <Posts/>
-      <Contact/>
-      
-      <span>made with 🌻 ☕ 🎧 💖 by myself ©{new Date().getFullYear()}</span>
+      <Routes>
+        <Route path="/" Component={Home}/>
+        <Route path="/projects" Component={Projects}/>
+        <Route path="/me" Component={About}/>
+        <Route path="/blog" Component={Posts}/>
+        <Route path="/contact" Component={Contact}/>
+      </Routes>
+      {/* <span>made with 🌻 ☕ 🎧 💖 by myself ©{new Date().getFullYear()}</span> */}
     </>
   )
 }

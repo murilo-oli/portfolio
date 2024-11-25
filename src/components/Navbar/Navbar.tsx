@@ -5,12 +5,12 @@ import { Item, LogoItem } from "./NavItem";
 export default function Navbar() {
     return (
         <NavContainer>
-            <LogoItem color={colors.home} href='#home'>oli.dev</LogoItem>
+            <LogoItem color={colors.home} to='/'>oli.dev</LogoItem>
             <MenuContainer>
-                <Item color={colors.proj} href='#projects'>projects</Item>
-                <Item color={colors.about}>about</Item>
-                <Item color={colors.blog} href='#posts'>posts</Item>
-                <Item color={colors.contact}>contact</Item>
+                <Item color={colors.proj} to='/projects'>projects</Item>
+                <Item color={colors.about} to='/me'>about</Item>
+                <Item color={colors.blog} to='/blog'>posts</Item>
+                <Item color={colors.contact} to='/contact'>contact</Item>
             </MenuContainer>
         </NavContainer>
     );
