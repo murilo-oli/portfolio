@@ -8,9 +8,9 @@ import {PiDevToLogo} from 'react-icons/pi'
 export default function Socials(){
     return (
         <SocialContainer>
-            <SocialIconLink href="https://github.com/akadot" target='_blank' title='open source codes'><LiaGithub size='2rem' /></SocialIconLink>
-            <SocialIconLink href="https://dev.to/akadot_" target='_blank' title='dev articles'><PiDevToLogo size='2rem'/></SocialIconLink>
-            <SocialIconLink href="https://medium.com/@akadot_" target='_blank' title='general articles'><TbBrandMedium size='2rem'/></SocialIconLink>
+            <SocialIconLink href="https://github.com/murilo-oli" target='_blank' title='open source codes'><LiaGithub size='2rem' /></SocialIconLink>
+            <SocialIconLink href="https://dev.to/olidev_" target='_blank' title='dev articles'><PiDevToLogo size='2rem'/></SocialIconLink>
+            <SocialIconLink href="https://medium.com/@murilo-oli" target='_blank' title='general articles'><TbBrandMedium size='2rem'/></SocialIconLink>
             <SocialIconLink href="https://www.linkedin.com/in/murilo-o/" target='_blank' title='professional me'><TbBrandLinkedin size='2rem'/></SocialIconLink>
             <SocialIconLink href="mailto:muriloholiveira@hotmail.com" title='mail me'><TbAt size='2rem'/></SocialIconLink>
             <SocialIconLink href="#" title='download resume'><TbFileText size='2rem'/></SocialIconLink>
