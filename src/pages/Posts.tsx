@@ -1,5 +1,6 @@
 import useSWR from "swr";
 import styled from "styled-components";
+import Title from "../components/Title";
 // import Article from "../components/Posts/Article";
 
 type PostStyleProps = {
@@ -25,7 +26,7 @@ export default function Posts() {
     if (data) console.log("data", data)
     return (
         <section>
-            <h1>POSTS</h1>
+            <Title title="POSTS"/>
             <PostContainer>
                 {data && data.map((post: { id: number, cover_image:string, title:string, tag_list:string[] }) => {
                     return (

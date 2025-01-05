@@ -18,7 +18,7 @@ export default function Home() {
                 <Suspense fallback={<span>Loading...</span>}>
                     <Model3D 
                         path="/model/main_model/scene.gltf"
-                        position={[0,-0.019,0]}
+                        position={[0,0.06,0]}
                         rotation={[0, -Math.PI / 10, 0]}
                         scale={[0.085, 0.085, 0.085]}
                         hasLight={true}

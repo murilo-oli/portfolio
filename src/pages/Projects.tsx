@@ -1,7 +1,9 @@
-export default function Projects(){
+import Title from "../components/Title";
+
+export default function Projects() {
     return (
-        <section id="projects">
-            <h1>PROJECTS</h1>
-        </section>
+        <>
+            <Title title="PROJECTS" />
+        </>
     );
 }
