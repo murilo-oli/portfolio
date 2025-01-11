@@ -1,16 +1,11 @@
 import useSWR from "swr";
 import styled from "styled-components";
 import Title from "../components/Title";
-import {useTranslation} from "react-i18next";
-import {useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
 // import Article from "../components/Posts/Article";
 
-type PostStyleProps = {
-    cover_img:string,
-    color:string,
-}
-
-type PostContent = { id: number, cover_image:string, title:string, tag_list:string[], description:string };
+type PostContent = Partial<{ id: number, cover_image: string, title: string, tag_list: string[], description: string }>;
 
 const fetcher = async (url: string) => await fetch(url).then((res) => {
     console.log("resSuccess", res)
@@ -26,9 +21,11 @@ export default function Posts() {
 
     useEffect(() => {
         if (data) {
+            const lang = i18n.language == "en-US" ? "english" : i18n.language;
             const filteredPosts = data.filter((item: PostContent) =>
-                item.description.toLowerCase().includes(i18n.language.toLowerCase())
+                !item.description?.toLowerCase().includes(lang.toLowerCase())
             );
+            
             setPosts(filteredPosts);
         }
     }, [data, i18n.language]);
@@ -41,21 +38,21 @@ export default function Posts() {
     if (isLoading) {
         return <p>Loading...</p>;
     }
-    
+
     return (
         <section>
-            <Title title="POSTS"/>
+            <Title title="POSTS" />
             <PostContainer>
                 {posts && posts.map((post: PostContent) => {
                     return (
-                        <PostItem cover_img={post.cover_image} color="purple">
+                        <PostItem>
                             <section>
                                 <p>{post.title}</p>
-                                {post.tag_list.map((tag, idx) => <span key={'tag'+idx} >{tag}</span>)}
+                                {post.tag_list?.map((tag, idx) => <span key={'tag' + idx} >{tag}</span>)}
                             </section>
                             <img src={post.cover_image} alt="abc" />
-                            
-                            
+
+
                             {/* <img src={post.cover_image} alt="cover" /> */}
                             {/* <Article articleId={post.id} /> */}
                         </PostItem>
@@ -73,7 +70,7 @@ const PostContainer = styled.section`
     margin-top: 2rem;
 `;
 
-const PostItem = styled.section<PostStyleProps>`
+const PostItem = styled.section`
     cursor: pointer;
     display: flex;
     align-items:center;
