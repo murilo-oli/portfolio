@@ -1,6 +1,8 @@
 import useSWR from "swr";
 import styled from "styled-components";
 import Title from "../components/Title";
+import {useTranslation} from "react-i18next";
+import {useEffect, useState } from "react";
 // import Article from "../components/Posts/Article";
 
 type PostStyleProps = {
@@ -8,27 +10,43 @@ type PostStyleProps = {
     color:string,
 }
 
+type PostContent = { id: number, cover_image:string, title:string, tag_list:string[], description:string };
+
 const fetcher = async (url: string) => await fetch(url).then((res) => {
     console.log("resSuccess", res)
-    return res.json()
+    return res.json();
 }).catch(err => {
     console.log("resError", err)
 });
 
 export default function Posts() {
-    const { data, error, isLoading } = useSWR(
-        "https://dev.to/api/articles?username=olidev_",
-        fetcher
-    );
+    const [posts, setPosts] = useState<PostContent[]>([]);
+    const { i18n } = useTranslation();
+    const { data, error, isLoading } = useSWR("https://dev.to/api/articles?username=olidev_", fetcher);
 
-    if (error) console.log("POSTS ERROR", error)
-    if (isLoading) console.log("POSTS Loading", isLoading)
-    if (data) console.log("data", data)
+    useEffect(() => {
+        if (data) {
+            const filteredPosts = data.filter((item: PostContent) =>
+                item.description.toLowerCase().includes(i18n.language.toLowerCase())
+            );
+            setPosts(filteredPosts);
+        }
+    }, [data, i18n.language]);
+
+    if (error) {
+        console.error("Error fetching posts:", error);
+        return <p>Error loading posts.</p>;
+    }
+
+    if (isLoading) {
+        return <p>Loading...</p>;
+    }
+    
     return (
         <section>
             <Title title="POSTS"/>
             <PostContainer>
-                {data && data.map((post: { id: number, cover_image:string, title:string, tag_list:string[] }) => {
+                {posts && posts.map((post: PostContent) => {
                     return (
                         <PostItem cover_img={post.cover_image} color="purple">
                             <section>

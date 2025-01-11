@@ -2,18 +2,17 @@ import styled from "styled-components";
 import Socials from "../components/Socials";
 import Model3D from "../components/3D/Model3D";
 import { Suspense } from "react";
-// import Translator from "../components/i18n/Translator";
+import Translator from "../components/i18n/Translator";
 
 export default function Home() {
     return (
         <HomeContainer id="home">
             <TextContent>
-                {/* <Translator path="home.msg"/> */}
-                <p>Hi, I&apos;m <strong>Murilo Oliveira</strong>,</p>
-                <h1>A PROFESSIONAL PROBLEM SOLVER.</h1>
-                <p>Currently solving web problems with <span data-lang="dotnet">.NET</span>, <span data-lang="csharp">C#</span>, <span data-lang="js">Javascript</span>, <span data-lang="ts">Typescript</span>, <span data-lang="react">React</span>, and <span data-lang="vue">Vue.</span></p>
-                <p>Also interested in game development, 3D modeling and printing, drawning, graffiti and writing.</p>
-                <p>See you.</p>
+                <p><Translator path="home.intro"/></p>
+                <h1><Translator path="home.impact"/></h1>
+                <p><Translator path="home.mainText"/></p>
+                <p><Translator path="home.otherText"/></p>
+                <p><Translator path="home.bye"/></p>
                 <Socials />
             </TextContent>
             <ImageContent>
