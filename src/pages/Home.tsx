@@ -2,11 +2,13 @@ import styled from "styled-components";
 import Socials from "../components/Socials";
 import Model3D from "../components/3D/Model3D";
 import { Suspense } from "react";
+// import Translator from "../components/i18n/Translator";
 
 export default function Home() {
     return (
         <HomeContainer id="home">
             <TextContent>
+                {/* <Translator path="home.msg"/> */}
                 <p>Hi, I&apos;m <strong>Murilo Oliveira</strong>,</p>
                 <h1>A PROFESSIONAL PROBLEM SOLVER.</h1>
                 <p>Currently solving web problems with <span data-lang="dotnet">.NET</span>, <span data-lang="csharp">C#</span>, <span data-lang="js">Javascript</span>, <span data-lang="ts">Typescript</span>, <span data-lang="react">React</span>, and <span data-lang="vue">Vue.</span></p>

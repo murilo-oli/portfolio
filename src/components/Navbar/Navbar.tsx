@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import colors from '../../styles/colors'
 import { Item, LogoItem } from "./NavItem";
+import LangSelect from "../i18n/LangSelector";
 
 export default function Navbar() {
     return (
@@ -11,6 +12,7 @@ export default function Navbar() {
                 <Item color={colors.about} to='/me'>about</Item>
                 <Item color={colors.blog} to='/blog'>posts</Item>
                 <Item color={colors.contact} to='/contact'>contact</Item>
+                <LangSelect/>
             </MenuContainer>
         </NavContainer>
     );
