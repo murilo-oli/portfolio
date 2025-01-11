@@ -5,7 +5,7 @@ import Title from "../components/Title";
 export default function Contact() {
     return (
         <>
-            <Title title="CONTACT" />
+            <Title title="titles.contact" />
             <Suspense fallback={<span>Loading...</span>}>
                 <Model3D
                     path="/model/cool_flowers/scene.gltf"

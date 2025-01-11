@@ -1,6 +1,7 @@
 import useSWR from "swr";
 import styled from "styled-components";
 import Title from "../components/Title";
+import colors from "../styles/colors";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 // import Article from "../components/Posts/Article";
@@ -41,7 +42,7 @@ export default function Posts() {
 
     return (
         <section>
-            <Title title="POSTS" />
+            <Title title="titles.blog" />
             <PostContainer>
                 {posts && posts.map((post: PostContent) => {
                     return (
@@ -100,7 +101,7 @@ const PostItem = styled.section`
         padding:0.3rem 0.5rem;
         border-radius: 50rem;
         background-color: #50fa7a1f;
-        color: #50fa7a;
+        color: ${colors.blog};
     }
 
     &:hover p{

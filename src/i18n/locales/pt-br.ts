@@ -1,5 +1,17 @@
 export default {
     translations:{
+        titles:{
+            proj:"PROJETOS",
+            blog:"ARTIGOS",
+            me:"SOBRE",
+            contact:"CONTATO",
+        },
+        nav:{
+            proj:"projetos",
+            blog:"artigos",
+            me:"sobre",
+            contact:"contato",
+        },
         home: {
             intro: 'Olá, eu sou <strong>Murilo Oliveira</strong>,',
             impact:'PROFISSIONAL EM RESOLVER PROBLEMAS.',
