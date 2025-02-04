@@ -1,8 +1,9 @@
 import styled from "styled-components"
+import Translator from "./i18n/Translator";
 
 export default function Title({title}:{title:string}){
     return (
-        <PageTitle>{title}</PageTitle>
+        <PageTitle><Translator path={title}/></PageTitle>
     )
 }
 

@@ -13,7 +13,7 @@ export default function Socials(){
             <SocialIconLink href="https://medium.com/@murilo-oli" target='_blank' title='general articles'><TbBrandMedium size='2rem'/></SocialIconLink>
             <SocialIconLink href="https://www.linkedin.com/in/murilo-o/" target='_blank' title='professional me'><TbBrandLinkedin size='2rem'/></SocialIconLink>
             <SocialIconLink href="mailto:muriloholiveira@hotmail.com" title='mail me'><TbAt size='2rem'/></SocialIconLink>
-            <SocialIconLink href="#" title='download resume'><TbFileText size='2rem'/></SocialIconLink>
+            <SocialIconLink href="https://drive.google.com/file/d/1oQ2-Cdt2SsQwSvQMhVsOvqjiH4hFL3lD/view?usp=sharing" title='open resume' target='_blank'><TbFileText size='2rem'/></SocialIconLink>
         </SocialContainer>
     );
 }
