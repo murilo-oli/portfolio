@@ -1,5 +1,8 @@
 export default {
     translations:{
+        generics:{
+            onBuilding:"Coming soon..."
+        },
         titles:{
             proj:"PROJECTS",
             blog:"POSTS",

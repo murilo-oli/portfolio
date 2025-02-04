@@ -2,7 +2,8 @@ import styled from "styled-components";
 import Title from "../components/Title";
 import Socials from "../components/Socials";
 import colors from "../styles/colors";
-import ProfilePhoto from '../assets/images/placeholder.jpg';
+import ProfilePhoto from '../assets/images/placeholder.svg';
+import Translator from "../components/i18n/Translator";
 type TechColor = {
     basecolor: string
 }
@@ -25,6 +26,7 @@ export default function About() {
                 </PhotoContent>
                 <InfosContent>
                     <section>
+                        <p><Translator path="generics.onBuilding"/></p>
                         <p>Mussum Ipsum, cacilds vidis litro abertis. Pellentesque nec nulla ligula. Donec gravida turpis a vulputate ultricies. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Detraxit consequat et quo num tendi nada. Manduma pindureta quium dia nois paga.</p>
                         <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Detraxit consequat et quo num tendi nada. Casamentiss faiz malandris se pirulitá. Negão é teu passadis, eu sou faxa pretis.</p>
                         <p>Per aumento de cachacis, eu reclamis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Quem num gosta di mim que vai caçá sua turmis!</p>
@@ -73,7 +75,7 @@ const PhotoContent = styled.section`
     height:100%;
 
     & img{
-        height: 20rem;
+        height: 23rem;
         width: 100%;
         object-fit: cover;
         object-position:top;

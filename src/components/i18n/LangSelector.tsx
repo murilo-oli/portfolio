@@ -34,7 +34,7 @@ export default function I18n() {
 
 
 const LangFlag = styled.img`
-    border-radius: 10rem;
+    border-radius: 0.2rem;
     width:1rem;
     height:1rem;
     cursor: pointer;
