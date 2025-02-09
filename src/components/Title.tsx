@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Translator from "./i18n/Translator";
+import colors from "../styles/colors";
 
 export default function Title({title}:{title:string}){
     return (
@@ -22,6 +23,6 @@ const PageTitle = styled.h1`
         display:block;        
         width: 100%;
         height: 2px;
-        background-color: #ffffff53;
+        background-color: ${colors.fgGray};
     }
 `;

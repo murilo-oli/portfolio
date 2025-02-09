@@ -29,7 +29,6 @@ export default function About() {
                         <p><Translator path="generics.onBuilding"/></p>
                         <p>Mussum Ipsum, cacilds vidis litro abertis. Pellentesque nec nulla ligula. Donec gravida turpis a vulputate ultricies. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Detraxit consequat et quo num tendi nada. Manduma pindureta quium dia nois paga.</p>
                         <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Detraxit consequat et quo num tendi nada. Casamentiss faiz malandris se pirulitá. Negão é teu passadis, eu sou faxa pretis.</p>
-                        <p>Per aumento de cachacis, eu reclamis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Quem num gosta di mim que vai caçá sua turmis!</p>
                     </section>
                     <TechContainer>
                         {techs.map((t, idx) => {
