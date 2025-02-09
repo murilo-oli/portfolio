@@ -1,5 +1,5 @@
 import colors from './colors'
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -13,7 +13,8 @@ body {
     max-width: 100vw;
     height: 100vh;
 
-    padding: 4rem 14rem 0rem 14rem;
+    padding-left:18rem;
+    padding-right:18rem;
 }
 
 body {
@@ -26,10 +27,16 @@ body {
 
 #root{
     display: grid;
-    grid-template-rows: 4rem 1fr;
+    grid-template-rows: 4rem 1fr max-content;
     row-gap: 2rem;
+    padding-left:4rem;
+    padding-right:4rem;
+    padding-top:4rem;
+    padding-bottom:0.8rem;
     /* align-items: center; */
     height:100%;
+    background:linear-gradient(#20202052,#00000000);
+    z-index:0;
 }
 
 span {
@@ -43,4 +50,13 @@ a {
 }
 `
 
-export default GlobalStyle;
+const Footer = styled.span`
+    text-align:center;
+    color:${colors.fgGray};
+    white-space:nowrap;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+`;
+
+export {GlobalStyle, Footer};

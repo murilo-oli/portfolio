@@ -60,6 +60,7 @@ export const LogoItem = styled(NavLink)`
     color: ${colors.bgDark};
     padding: 0.1rem 0.5rem;
     position: relative;
+    border-radius:0.2rem;
 
     &::before{
         content: "";

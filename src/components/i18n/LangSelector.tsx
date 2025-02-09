@@ -3,7 +3,7 @@ import styled from "styled-components";
 // import colors from "../../styles/colors";
 
 import BRFlag from '../../assets/images/br.svg';
-import USFlag from '../../assets/images/us.svg';
+import ENGFlag from '../../assets/images/eng.svg';
 
 // type LangStyle = {
 //     selected: boolean
@@ -17,7 +17,6 @@ export default function I18n() {
     }
 
     const selectedLang = i18n.language;
-    console.log("🚀 ~ I18n ~ selectedLang:", selectedLang)
 
     return (
         <>
@@ -25,7 +24,7 @@ export default function I18n() {
             <LangOpt selected={selectedLang == "pt-BR"} onClick={() => handleLanguage("pt-BR")}>ptBR</LangOpt> */}
 
             <LangFlag 
-                src={selectedLang == "pt-BR" ? BRFlag : USFlag}
+                src={selectedLang == "pt-BR" ? BRFlag : ENGFlag}
                 onClick={() => selectedLang == "pt-BR" ? handleLanguage("en-US") : handleLanguage("pt-BR")}/>
         </>
 

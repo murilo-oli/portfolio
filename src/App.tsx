@@ -1,7 +1,7 @@
-import GlobalStyle from "./styles/GlobalStyle";
+import {GlobalStyle, Footer} from "./styles/GlobalStyle";
 import Navbar from "./components/Navbar/Navbar";
 import {Routes, Route} from 'react-router-dom'
-// import Socials from "./components/Socials";
+import Translator from "./components/i18n/Translator";
 
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
@@ -21,7 +21,7 @@ function App() {
         <Route path="/blog" Component={Posts}/>
         <Route path="/contact" Component={Contact}/>
       </Routes>
-      {/* <span>made with 🌻 ☕ 🎧 💖 by myself ©{new Date().getFullYear()}</span> */}
+      <Footer><Translator path="generics.footer"/>{new Date().getFullYear()}</Footer>
     </>
   )
 }

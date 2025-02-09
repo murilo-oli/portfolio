@@ -21,7 +21,7 @@ export default function Home() {
                         path="/model/main_model/scene.gltf"
                         position={[0,0.06,0]}
                         rotation={[0, -Math.PI / 10, 0]}
-                        scale={[0.085, 0.085, 0.085]}
+                        scale={[0.079, 0.079, 0.079]}
                         hasLight={true}
                         enableRotation={true}
                         enableZoom={false}
@@ -47,8 +47,8 @@ const HomeContainer = styled.main`
 
 const TextContent = styled.section`
     /* line-height: 1.7; */
-    padding-right: 5rem;
-    padding-top: 2rem;
+
+    padding-top: 1rem;
     width:100%;
     align-self:baseline;
 

@@ -1,7 +1,7 @@
 export default {
     bgDark: "#030303",
     fgDark: "#ffffff",
-    fgGray:"#576ea1",
+    fgGray:"#343c4f",
     home: "#ffbe0b",
     about: "#9b5de5",
     blog: "#50fa7b",
