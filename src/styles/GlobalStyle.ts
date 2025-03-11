@@ -35,7 +35,7 @@ body {
     padding-bottom:0.8rem;
     /* align-items: center; */
     height:100%;
-    background:linear-gradient(#20202040 0%,#00000000 80%);
+    /* background:linear-gradient(#20202040 0%,#00000000 80%); */
     z-index:0;
 }
 
@@ -47,6 +47,20 @@ a {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+    #root{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        padding:1rem;
+        height:100%;
+    }
+
+    body{
+        padding:0;
+    }
 }
 `
 
