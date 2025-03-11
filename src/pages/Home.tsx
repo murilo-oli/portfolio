@@ -18,13 +18,13 @@ export default function Home() {
             <ImageContent>
                 <Suspense fallback={<span>Loading...</span>}>
                     <Model3D 
-                        path="/model/main_model/scene.gltf"
-                        position={[0,0.06,0.1]}
-                        rotation={[0, -Math.PI / 10, 0]}
-                        scale={[0.085, 0.085, 0.085]}
+                        path="/model/myHead.glb"
+                        position={[0,-0.5,0]}
+                        rotation={[0, 0, 0]}
+                        scale={[10, 10, 10]}
                         hasLight={true}
                         enableRotation={true}
-                        enableZoom={false}
+                        enableZoom={true}
                     />
                 </Suspense>
             </ImageContent>
