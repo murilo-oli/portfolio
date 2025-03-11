@@ -34,6 +34,7 @@ const BuildingContainer = styled.section`
     row-gap:2rem;
     height:max-content;
     width:max-content;
+    justify-self:center;
 
     color:${colors.fgDark}
 `;

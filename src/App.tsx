@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import ComingSoon from "./pages/ComingSoon";
 function App() {
   const isProd = process.env.NODE_ENV === 'production';
+
   return (
     <>
       <GlobalStyle />
