@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Title from "../components/Title";
 import Socials from "../components/Socials";
 import colors from "../styles/colors";
-import ProfilePhoto from '../assets/images/placeholder.svg';
+import ProfilePhoto from '../assets/images/myPicture.jpeg';
 import Translator from "../components/i18n/Translator";
 type TechColor = {
     basecolor: string
@@ -74,10 +74,10 @@ const PhotoContent = styled.section`
     height:100%;
 
     & img{
-        height: 23rem;
+        height: 24rem;
         width: 100%;
         object-fit: cover;
-        object-position:top;
+        object-position: top;
         border-radius: 0.5rem;
     }
 `;
@@ -102,7 +102,7 @@ const TechContainer = styled.section`
 
 const Techs = styled.span<TechColor>`
     background-color:${props => props.basecolor}4D;
-    color: ${props => props.basecolor};
+    color: #ffffffc7;
     border: 1px solid ${props => props.basecolor};
     border-radius: 0.5rem;
     border-style: dashed;

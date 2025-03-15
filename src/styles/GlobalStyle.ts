@@ -1,6 +1,5 @@
 import colors from './colors'
 import styled, { createGlobalStyle } from 'styled-components'
-import BGPattern from '../assets/images/wave-pattern.svg';
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -13,15 +12,13 @@ const GlobalStyle = createGlobalStyle`
 body {
     max-width: 100vw;
     height: 100vh;
-    padding-left:20rem;
-    padding-right:20rem;
     color: ${colors.fgDark};    
     font-family: 'Lexend';
-    background: ${colors.bgDark} url(${BGPattern});
-    background-repeat:no-repeat;
-    background-position: bottom;
-    background-size:contain;
-    /* overflow:hidden; */
+    background: ${colors.bgDark};
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 }
 
 
@@ -29,14 +26,14 @@ body {
     display: grid;
     grid-template-rows: 4rem 1fr max-content;
     row-gap: 2rem;
-    padding-left:2rem;
-    padding-right:2rem;
     padding-top:4rem;
     padding-bottom:0.8rem;
-    /* align-items: center; */
     height:100%;
-    /* background:linear-gradient(#20202040 0%,#00000000 80%); */
+    width: 55rem;
     z-index:0;
+}
+
+#root main{
 }
 
 span {
@@ -52,6 +49,7 @@ a {
 @media only screen and (max-width: 900px) {
     #root{
         display:flex;
+        flex-direction:column;
         align-items:center;
         justify-content:center;
         padding:1rem;

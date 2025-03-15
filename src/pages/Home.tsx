@@ -19,7 +19,7 @@ export default function Home() {
                 <Suspense fallback={<span>Loading...</span>}>
                     <Model3D 
                         path="/model/myHead.glb"
-                        position={[0,-0.5,0]}
+                        position={[0.2,-0.5,0]}
                         rotation={[0, 0, 0]}
                         scale={[10, 10, 10]}
                         hasLight={true}
@@ -32,25 +32,16 @@ export default function Home() {
     );
 }
 
-const HomeContainer = styled.main`
+const HomeContainer = styled.section`
     height:100%;
     display:flex;
     align-items: center;
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr; */
-    /* column-gap: 2rem; */
-
-    /* justify-content:center; */
-
-    /* padding-bottom: 6rem; */
 `;
 
 const TextContent = styled.section`
-    /* line-height: 1.7; */
-
     padding-top: 1rem;
     width:100%;
-    align-self:baseline;
+    align-self: baseline;
 
     & p{
         padding: 1rem 0;
@@ -74,9 +65,9 @@ const TextContent = styled.section`
 `;
 
 const ImageContent = styled.section`
-  height: 100%;  // Alterar a altura para 100% da viewport
-  width: 100%;    // Garantir que o canvas ocupe a largura total
-  justify-self: center;  // Centralizar o canvas
+  height: 100%;
+  width: 100%;
+  justify-self: center;
   display: flex;
   align-items: center;
   justify-content: center;

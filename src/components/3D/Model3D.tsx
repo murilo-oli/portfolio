@@ -48,15 +48,13 @@ function Model({
             const { clientX, clientY } = event;
             const { innerWidth, innerHeight } = window;
 
-            // Normaliza os valores do mouse para um intervalo entre -1 e 1
             const x = (clientX / innerWidth) * 2 - 1;
             const y = (clientY / innerHeight) * 2 - 1;
 
-            // Aplica a rotação do modelo com base na posição do mouse
-            modelRef.current.rotation.y = x * Math.PI * 0.5; // Rotação horizontal (Eixo Y)
+            modelRef.current.rotation.y = x * Math.PI * 0.5;
 
-            const minRotationX = -Math.PI / 12; // Limite inferior (-30°)
-            const maxRotationX = Math.PI / 12;  // Limite superior (30°)
+            const minRotationX = -Math.PI / 10;
+            const maxRotationX = Math.PI / 10;
 
             modelRef.current.rotation.x = Math.max(minRotationX, Math.min(maxRotationX, y * Math.PI * 0.5));
         };
@@ -72,11 +70,12 @@ export default function Model3D(props: ModelConfigs) {
     return (
         <Canvas style={{ width: "100%", height: "100%" }} camera={{ position: [0, 0, 3] }}>
             <Suspense fallback={<span>Loading...</span>}>
-                <ambientLight />
+                <ambientLight color="#fffcd9"/>
                 {props.hasLight && (
                     <>
                         <pointLight color="#1F44D9" position={[0, 1, -1]} intensity={50} distance={5} decay={2} />
-                        <pointLight color="#450496" position={[-2, 1, 1]} intensity={50} distance={5} decay={2} />
+
+                        <pointLight color="#3d21da" position={[-2, 1, 1]} intensity={50} distance={5} decay={2} />
                     </>
                 )}
                 <Model {...props} />

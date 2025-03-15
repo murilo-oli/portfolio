@@ -23,13 +23,13 @@ function App() {
       ) : (
         <>
           <Navbar />
-          <Routes>
-            <Route path="/" Component={Home} />
-            <Route path="/projects" Component={Projects} />
-            <Route path="/me" Component={About} />
-            <Route path="/blog" Component={Posts} />
-            <Route path="/contact" Component={Contact} />
-          </Routes>
+            <Routes>
+              <Route path="/" Component={Home} />
+              <Route path="/projects" Component={Projects} />
+              <Route path="/me" Component={About} />
+              <Route path="/blog" Component={Posts} />
+              <Route path="/contact" Component={Contact} />
+            </Routes>
           <Footer><Translator path="generics.footer" />{new Date().getFullYear()}</Footer>
         </>
       )}
